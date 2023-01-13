@@ -13,6 +13,55 @@
 
 body {
     background-color: var(--yellow);
+    background-image: url("images/mainbackground.png");
     font-family: 'Rubik', sans-serif;
     font-size: var(--rootsize);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div.container {
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header a {
+    width: 100%;
+    max-width: 250px;
+}
+
+header a img {
+    width: 100%;
+    height: auto;
+}
+
+#cart {
+    position: relative;
+    width: 100%;
+    max-width: 50px;
+}
+
+#cart .label {
+    width: 2rem;
+    height: 2rem;
+    box-sizing: border-box;
+    padding-top: 5px;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--red);
+    position: absolute;
+    top: -1.3rem;
+    left: -1.3rem;
 }
