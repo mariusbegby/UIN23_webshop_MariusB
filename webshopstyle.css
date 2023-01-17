@@ -176,6 +176,7 @@ article.product-card > * {
     border-left: 0.5rem solid var(--green);
     border-bottom: 0.5rem solid var(--green);
     padding: 1rem;
+    transition:  ease-in-out 0.2s;
 }
 
 #cart-view ul {
@@ -209,4 +210,9 @@ span.price, span.quantity {
 
 span.title {
     width: calc(100% - 9rem);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }

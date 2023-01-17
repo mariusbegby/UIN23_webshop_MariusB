@@ -15,20 +15,17 @@
             <a href="/index.html">
                 <img src="images/LD_logo.svg" alt="Legodudes logo">
             </a>
-            <figure id="cart">
-                <span class="label">2</span>
+            <figure id="cart" onClick="toggleCart()">
+                <span class="label">0</span>
                 <img src="images/legocart.svg" alt="Shopping cart">
             </figure>
         </header>
 
-        <section id="cart-view">
+        <section id="cart-view" class="hidden">
             <h3>Din handlevogn</h3>
             <ul>
                 <li>
-                    <span class="title">Dragon Zane</span>
-                    <span class="price">89,-</span>
-                    <span class="quantity">x1</span>
-                    <button class="delete">X</button>
+                    Din handlevogn er tom.
                 </li>
             </ul>
             <p>Totalt: Kr. <span id="total">0</span>,-</p>
@@ -49,7 +46,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Dragon Zane</h3>
                 <span class="price">Kr. 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onclick="addToCart('Dragon Zane', 89)">Legg i handlekurv</button>
             </article>
 
             <article class="product-card">
@@ -57,7 +54,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Lil Ninja</h3>
                 <span class="price">Kr. 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onclick="addToCart('Lil Ninja', 89)">Legg i handlekurv</button>
             </article>
 
             <article class="product-card">
@@ -65,7 +62,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Master Wu</h3>
                 <span class="price">Kr. 99,-</span>
-                <button>Legg i handlekurv</button>
+                <button onclick="addToCart('Master Wu', 99)">Legg i handlekurv</button>
             </article>
 
             <article class="product-card">
@@ -73,7 +70,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Scuba Kai</h3>
                 <span class="price">Kr. 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onclick="addToCart('Scuba Kai', 89)">Legg i handlekurv</button>
             </article>
 
             <article class="product-card">
@@ -81,7 +78,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>The Mechanic</h3>
                 <span class="price">Kr. 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onclick="addToCart('The Mechanic', 89)">Legg i handlekurv</button>
             </article>
 
             <article class="product-card">
@@ -89,7 +86,7 @@
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Vengestone Warrior</h3>
                 <span class="price">Kr. 89,-</span>
-                <button>Legg i handlekurv</button>
+                <button onclick="addToCart('Vengestone Warrior', 89)">Legg i handlekurv</button>
             </article>
         </main>
     </div>
