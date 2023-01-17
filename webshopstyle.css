@@ -38,6 +38,7 @@ div.container {
     margin: 0 auto;
     background-color: var(--white);
     overflow: hidden;
+    position: relative;
 }
 
 header {
@@ -162,4 +163,50 @@ article.product-card button {
 article.product-card > * {
     display: block;
     clear: both;
+}
+
+#cart-view {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    right: 0;
+    top: 70px;
+    border-left: 0.5rem solid var(--green);
+    border-bottom: 0.5rem solid var(--green);
+    padding: 1rem;
+}
+
+#cart-view ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-view ul li {
+    border-bottom: 1px solid var(--green);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#cart-view ul li > * {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+button.delete {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+}
+
+span.price, span.quantity {
+    width: 3rem;
+}
+
+span.title {
+    width: calc(100% - 9rem);
 }
