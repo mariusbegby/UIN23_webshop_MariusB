@@ -113,26 +113,30 @@ function addToCart(prodid) {
 function changeQuantityInCart(prodid, amount) {
     let productInCart = cart.find((e) => e.prodid === prodid);
 
-    if(productInCart.quantity < 1) {
+    if (productInCart.quantity < 1) {
         return;
     }
 
-    productInCart.quantity += amount;    
+    productInCart.quantity += amount;
     updateStorage(prodid, -amount);
 
-    if(productInCart.quantity < 1) {
+    if (productInCart.quantity < 1) {
         deleteProduct(prodid);
+    } else {
+        renderCart();
+        renderProducts();
     }
-
-    renderCart();
-    renderProducts();
 }
 
 function deleteProduct(prodid) {
     let productInCart = cart.find((e) => e.prodid === prodid);
 
     document
-        .querySelector('#cart-view ul li:nth-child(' + cart.findIndex((e) => e.prodid === prodid) + 1 + ')')
+        .querySelector(
+            '#cart-view ul li:nth-child(' +
+                (cart.findIndex((e) => e.prodid === prodid) + 1) +
+                ')'
+        )
         .classList.add('hidden');
     setTimeout(() => {
         cart.splice(
