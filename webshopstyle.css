@@ -188,6 +188,7 @@ article.product-card > * {
     border-bottom: 1px solid var(--green);
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
+    transition:  ease-in-out 0.2s;
 }
 
 #cart-view ul li > * {
