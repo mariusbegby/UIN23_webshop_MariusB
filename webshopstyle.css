@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
 
 :root {
-    --red: #DA291C;
+    --red: #da291c;
     --blue: #006db7;
-    --white: #FFFFFF;
-    --yellow: #FFD700;
-    --green: #00AF4D;
+    --white: #ffffff;
+    --yellow: #ffd700;
+    --green: #00af4d;
+    --light-grey: #8f8f8f;
+    --grey: #3b3b3b;
     --black: #000000;
     --maxwidth: 1200px;
     --rootsize: 20px;
@@ -13,7 +15,7 @@
 
 body {
     background-color: var(--yellow);
-    background-image: url("images/mainbackground.png");
+    background-image: url('images/mainbackground.png');
     font-family: 'Rubik', sans-serif;
     font-size: var(--rootsize);
     margin-top: 0;
@@ -77,7 +79,7 @@ header a img {
     left: -1.3rem;
 }
 
-nav { 
+nav {
     width: 100%;
     background-color: var(--red);
     display: flex;
@@ -90,7 +92,7 @@ nav a {
     border-bottom: 5px solid var(--red);
     display: inline-block;
     text-transform: uppercase;
-    transition: ease-in-out .4s;
+    transition: ease-in-out 0.4s;
 }
 
 nav a:hover {
@@ -98,7 +100,7 @@ nav a:hover {
     border-color: var(--yellow);
 }
 
-nav a.active{
+nav a.active {
     background-color: var(--yellow);
     color: var(--black);
     border-color: var(--black);
@@ -160,10 +162,12 @@ article.product-card button {
     color: var(--white);
 }
 
+/*
 article.product-card > * {
     display: block;
     clear: both;
 }
+*/
 
 #cart-view {
     width: 100%;
@@ -176,7 +180,7 @@ article.product-card > * {
     border-left: 0.5rem solid var(--green);
     border-bottom: 0.5rem solid var(--green);
     padding: 1rem;
-    transition:  ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
 }
 
 #cart-view ul {
@@ -188,7 +192,7 @@ article.product-card > * {
     border-bottom: 1px solid var(--green);
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
-    transition:  ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
 }
 
 #cart-view ul li > * {
@@ -205,15 +209,56 @@ button.delete {
     border: none;
 }
 
-span.price, span.quantity {
+span.price,
+span.quantity {
     width: 3rem;
 }
 
 span.title {
-    width: calc(100% - 9rem);
+    width: calc(100% - 11.25rem);
 }
 
 .hidden {
     visibility: hidden;
     opacity: 0;
+}
+
+article.product-card section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article.product-card section span {
+    color: white;
+}
+
+article.product-card button:hover {
+    cursor: pointer;
+}
+
+article.product-card button:disabled {
+    background-color: var(--grey);
+    color: var(--light-grey);
+    cursor: not-allowed;
+}
+
+#cart-view .cart-product input {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#cart-view .cart-product .quantity-button {
+    width: 1.25rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
 }

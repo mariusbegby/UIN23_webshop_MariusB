@@ -10,7 +10,6 @@ function addToCart(title, price) {
     renderCart();
 
     if(document.querySelector("#cart-view").classList.contains("hidden")) {
-        console.log("test");
         document.querySelector("#cart-view").classList.remove("hidden");
     }
 }
